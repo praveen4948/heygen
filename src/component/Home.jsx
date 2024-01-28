@@ -6,9 +6,9 @@ import { PhotoAvatar } from "./PhotoAvatar";
 import Template from "./Template";
 
 export const Home = () => {
-  const [instatnt, setInstatnt] = useState(false);
+  const [instatnt, setInstatnt] = useState(true);
   const [photo, setPhoto] = useState(false);
-  const [template, setTemplate] = useState(true);
+  const [template, setTemplate] = useState(false);
   const handleinstant = () => {
     setInstatnt(true);
     setPhoto(false);

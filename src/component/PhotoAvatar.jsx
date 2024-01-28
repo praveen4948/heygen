@@ -88,7 +88,6 @@ export const PhotoAvatar = () => {
             <p>Shakespeare</p>
         </div>
 
-        {/* <div><ScriptGenForm/></div>  */}
       </div>
     </div>
   );

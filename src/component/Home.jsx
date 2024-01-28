@@ -1,6 +1,5 @@
 import { MDBBtn } from "mdb-react-ui-kit";
 import React, { useState } from "react";
-import ScriptGenForm from "./Modal";
 import { InstantAvatar } from "./InstantAvatar";
 import { PhotoAvatar } from "./PhotoAvatar";
 import Template from "./Template";
@@ -30,12 +29,12 @@ export const Home = () => {
         <div className="left">
             <div className="heading"><i class="fa-solid fa-user-plus"></i> Create Avatar</div>
             <div className="button_card">
-              <div onClick={handleinstant} className="card">
+              <div onClick={handleinstant} className={`card ${instatnt ? 'active_button' : ''}`}>
                 <img src="https://static.heygen.ai/heygen/home/home-ia-icon.png"/>
                 <div className="title">Instant Avatar</div>
                 <p>Get your digital twin in minutes!</p>
               </div>
-              <div onClick={handlePhoto} className="card">
+              <div onClick={handlePhoto} className={`card ${photo ? 'active_button' : ''}`}>
                 <img src="https://static.heygen.ai/heygen/home/home-tp-icon.png"/>
                 <div className="title">Photo Avatar</div>
                 <p>Animate your photo with text</p>
@@ -46,12 +45,12 @@ export const Home = () => {
         <div className="right">
           <div className="heading"><i class="fa-solid fa-video"></i> Create Video</div>
           <div className="button_card">
-          <div onClick={handleTemplate} className="card">
+              <div onClick={handleTemplate} className={`card ${template ? 'active_button' : ''}`}>
                 <img src="https://static.heygen.ai/heygen/home/home-template-icon.png"/>
                 <div className="title">Template</div>
                 <p>Start from a template</p>
               </div>
-              <div className="card">
+              <div className={`card`}>
                 <img src="https://static.heygen.ai/heygen/home/home-aiscript-icon.png"/>
                 <div className="title">AI Script</div>
                 <p>Start from AI script Generation</p>
